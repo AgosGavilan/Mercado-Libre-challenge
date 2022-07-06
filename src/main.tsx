@@ -10,7 +10,7 @@ ReactDOM.render(
   <>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <BrowserRouter>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme}> {/*Wrap your application with the ChakraProvider provided by @chakra-ui/react*/}
         <App />
       </ChakraProvider>
     </BrowserRouter>
