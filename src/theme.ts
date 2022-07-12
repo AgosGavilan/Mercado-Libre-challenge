@@ -9,7 +9,7 @@ export default extendTheme({
     },
   },
   colors: {
-    primary: {
+    primary: { //amarillos
       50: "#FFF9BD",
       100: "#FFF693",
       200: "#FFF693",
