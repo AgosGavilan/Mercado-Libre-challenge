@@ -1,10 +1,10 @@
 import React from "react";
 import { Stack, Box, Image } from "@chakra-ui/react";
 
-import { Props } from "../../product/screens/Details";
-import s from "../../styles/productImage.module.css"
+import { Props } from "../app/screens/Details";
+import s from "../styles/productImage.module.css"
 
-const ProductImage: React.FC<Props> = ({product}) => {
+const ProductImage: React.FC<Props> = ({product, infocarousel}) => {
   return (
     <Stack direction="row">
       <Stack direction="column" spacing={2}>

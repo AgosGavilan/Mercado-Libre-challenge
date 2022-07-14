@@ -1,11 +1,12 @@
 import React from "react";
 import {Container, Stack, Box} from "@chakra-ui/react";
 
-import DetailsScreen from "../product/screens/Details";
-import { NavBar } from "./screens/NavBar";
+import DetailsScreen from "./screens/Details";
+import { NavBar } from "../components/NavBar"
 
 import mock from "../product/mock";
-import Header from "./screens/Header";
+import imgcarousel from "../product/imgcarousel";
+import Header from "../components/Header";
 
 
 const App: React.FC = () => {
@@ -19,7 +20,7 @@ const App: React.FC = () => {
 
           <Container alignSelf="center" maxWidth="container.xl">
             <Header />
-            <DetailsScreen product={mock.product}/>
+            <DetailsScreen product={mock.product} infocarousel={imgcarousel.infocarousel}/>
           </Container>
     </Stack>
   );
