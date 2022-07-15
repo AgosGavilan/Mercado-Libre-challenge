@@ -1,0 +1,41 @@
+.mySwiper {
+    position: static !important;
+    overflow: hidden;
+}
+
+.btnPrev {
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 64px !important;
+    width: 64px !important;
+    position: absolute;
+    left: -25px;
+}
+
+.btnPrev::after {
+    font-size: 22px !important;
+}
+
+.btnPrev:hover {
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 5px);
+}
+
+.btnNext {
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 64px !important;
+    width: 64px !important;
+    position: absolute;
+    right: -25px;
+}
+
+.btnNext::after {
+    font-size: 22px !important;
+}
+
+.btnNext:hover {
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 5px);
+}
+

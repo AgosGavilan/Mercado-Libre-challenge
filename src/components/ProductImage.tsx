@@ -4,7 +4,7 @@ import { Stack, Box, Image } from "@chakra-ui/react";
 import { Props } from "../app/screens/Details";
 import s from "../styles/productImage.module.css"
 
-const ProductImage: React.FC<Props> = ({product, infocarousel}) => {
+const ProductImage: React.FC<Props> = ({product}) => {
   return (
     <Stack direction="row">
       <Stack direction="column" spacing={2}>
@@ -13,10 +13,13 @@ const ProductImage: React.FC<Props> = ({product, infocarousel}) => {
             border="1px"
             borderRadius="4px"
             borderColor="blackAlpha.400"
-            height="48px"
-            width="48px"
+            height="50px"
+            width="50px"
             padding="2px"
             cursor="pointer"
+            _hover={{
+              border: "2px solid #3483fa;"
+            }}
           >
             <Image
               src={el.url}
