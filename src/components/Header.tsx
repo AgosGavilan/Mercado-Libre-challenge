@@ -28,6 +28,8 @@ const Header: React.FC = () => {
               as={VscChevronRight}
               color="blackAlpha.700"
               alignSelf="center"
+              marginRight="-7px !important"
+              marginLeft="2px !important"
             ></Icon>
             <Link>Peluches</Link>
           </Stack>

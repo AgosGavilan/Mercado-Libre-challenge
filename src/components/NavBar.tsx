@@ -27,7 +27,7 @@ export const NavBar: React.FC = () => {
             maxWidth={600}
             width="100%"
           >
-            <Input variant="unstyled" paddingX={2} />
+            <Input variant="unstyled" paddingX={2} placeholder="Busca productos, marcas y más..." _placeholder={{color: "blackAlpha.400"}}/>
             <Icon as={AiOutlineSearch} width={5} height={5} color="gray.400"></Icon>{/*lupita de la Navbar */}
           </Stack>
         </Stack>

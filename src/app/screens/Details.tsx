@@ -7,6 +7,7 @@ import {Product} from "../../product/types";
 import ProductImage from "../../components/ProductImage";
 import Carrousel from "../../components/Carrousel";
 import Tabla from "../../components/Tabla";
+import Description from "../../components/Description";
 
 export interface Props {
   product: Product; //product es un objeto
@@ -28,7 +29,10 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
             <Link marginTop="1.5rem !important" fontSize="sm" color="#1259c3">Ver más publicaciones del vendedor</Link>
           </Stack>
           {/*Tabla */}
-          <Tabla/>
+          <Tabla />
+          {/*Description */}
+          <Description />
+          {/*Opiniones */}
         </Stack>
 
 
