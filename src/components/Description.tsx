@@ -1,8 +1,8 @@
-import { Box, Button, Container, Heading, Icon, Input, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Icon, Input, Link, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import { PyR } from "../product/types";
-import {BsArrowReturnRight} from "react-icons/bs"
+import { BsArrowReturnRight } from "react-icons/bs"
 
 
 const preguntasFrecuentes: string[] = [
@@ -148,7 +148,7 @@ const Description: React.FC = () => {
                                 </Box>
                             ))}
                     </Stack>
-                    <Link fontSize="sm">Ver todas las preguntas</Link>
+                    <Link fontSize="sm" paddingBottom="2rem">Ver todas las preguntas</Link>
                 </Stack>
             </Box>
         </Stack>

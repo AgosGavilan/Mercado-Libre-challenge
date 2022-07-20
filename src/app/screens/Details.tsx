@@ -8,6 +8,7 @@ import ProductImage from "../../components/ProductImage";
 import Carrousel from "../../components/Carrousel";
 import Tabla from "../../components/Tabla";
 import Description from "../../components/Description";
+import Opioniones from "../../components/Opiniones";
 
 export interface Props {
   product: Product; //product es un objeto
@@ -33,6 +34,7 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
           {/*Description */}
           <Description />
           {/*Opiniones */}
+          <Opioniones />
         </Stack>
 
 

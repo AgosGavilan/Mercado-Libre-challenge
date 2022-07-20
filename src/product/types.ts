@@ -21,3 +21,10 @@ export interface PyR {
   respuesta?: string
   date?: string
 }
+
+export interface Opiniones {
+  estrellas: string;
+  value: number;
+  cantidadPersonas: number;
+  colorScheme?: string
+}
