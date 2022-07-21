@@ -3,40 +3,37 @@ import React from "react";
 import { BsStar } from "react-icons/bs"
 
 import mock from "../product/mock";
-import { Opiniones } from "../product/types"
+import { Review } from "../product/types"
+import Comentarios from "./Comentarios";
 
-let opiniones: Opiniones[] = [
+let review: Review[] = [
     {
         estrellas: "5",
         value: 100,
         cantidadPersonas: 4,
-        colorScheme: "#3483fa"
     },
     {
         estrellas: "4",
         value: 0,
         cantidadPersonas: 0,
-        colorScheme: "rgba(0,0,0,.1)"
     },
     {
         estrellas: "3",
         value: 0,
         cantidadPersonas: 0,
-        colorScheme: "rgba(0,0,0,.1)"
     },
     {
         estrellas: "2",
         value: 0,
         cantidadPersonas: 0,
-        colorScheme: "rgba(0,0,0,.1)"
     },
     {
         estrellas: "1",
         value: 0,
         cantidadPersonas: 0,
-        colorScheme: "rgba(0,0,0,.1)"
     },
 ]
+
 
 const Opioniones: React.FC = () => {
     return (
@@ -81,8 +78,8 @@ const Opioniones: React.FC = () => {
                     </Stack>
                     <Text fontSize="14px" color="blackAlpha.700">Promedio entre 4 opiniones</Text>
                 </Stack>
-                <Stack width="100%" spacing={1} marginLeft="2.5rem"> {/* derecha */}
-                    {opiniones?.map(el => (
+                <Stack width="100%" spacing={1} marginLeft="2.5rem" paddingTop="0.5rem"> {/* derecha */}
+                    {review?.map(el => (
                         <Stack direction="row" alignItems="center">
                             <Text color="blackAlpha.600" width="20%">{el.estrellas} estrellas</Text>
                             <Progress 
@@ -91,11 +88,15 @@ const Opioniones: React.FC = () => {
                             width="45%" 
                             borderRadius="2px" 
                             marginTop="5px"
+                            backgroundColor="rgba(0,0,0,.1)"
                             />
                             <Text color="blackAlpha.600" paddingLeft="12px">{el.cantidadPersonas}</Text>
                         </Stack>
                     ))}
                 </Stack>
+            </Stack>
+            <Stack>
+                <Comentarios />
             </Stack>
 
         </Stack>

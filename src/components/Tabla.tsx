@@ -43,11 +43,11 @@ const Tabla: React.FC = () => {
                             <Text fontSize="sm">Plush</Text>
                         </Stack>
                         <Stack direction="row">
-                            <Text fontWeight="bold" fontSize="sm">Altura x Anocho:</Text>
+                            <Text fontWeight="bold" fontSize="sm">Altura x Ancho:</Text>
                             <Text fontSize="sm">100cm x 1cm</Text>
                         </Stack>
                     </Stack>
-                    <Stack direction="row">
+                    <Stack direction="row" paddingBottom="1rem">
                         <Text fontWeight="bold" fontSize="sm">Es material hipoalergénico:</Text>
                         <Text fontSize="sm">Si</Text>
                     </Stack>

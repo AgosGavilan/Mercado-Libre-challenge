@@ -22,9 +22,16 @@ export interface PyR {
   date?: string
 }
 
-export interface Opiniones {
+export interface Review {
   estrellas: string;
   value: number;
   cantidadPersonas: number;
   colorScheme?: string
+}
+
+export interface Opiniones {
+  titulo: string;
+  comentario: string;
+  date: string;
+  id: string;
 }

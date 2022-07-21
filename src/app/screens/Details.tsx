@@ -20,7 +20,10 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
   return (
     <Stack>
       <Stack backgroundColor="white" borderRadius="4px" boxShadow="base">
-        <Stack margin="16px" divider={<StackDivider borderColor="blackAlpha.300" marginLeft="3rem !important"/>} maxWidth="770px"> {/*izquierda*/}
+        <Stack 
+        margin="16px" 
+        divider={<StackDivider borderColor="blackAlpha.300" marginInline="auto" marginLeft="3rem !important" width="90%" paddingInline="0.5rem" position="relative"/>} 
+        maxWidth="770px"> {/*izquierda*/}
           {/*imagen */}
           <ProductImage product={product} infocarousel={infocarousel}/>
           {/*Carrousel*/}
