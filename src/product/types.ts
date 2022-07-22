@@ -33,5 +33,6 @@ export interface Opiniones {
   titulo: string;
   comentario: string;
   date: string;
-  id: string;
+  id: number;
+  like: boolean;
 }

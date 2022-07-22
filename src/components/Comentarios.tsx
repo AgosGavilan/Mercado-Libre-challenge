@@ -9,36 +9,44 @@ const comentarios: Opiniones[] = [
         titulo: "Hermoso excelente",
         comentario: "Hermoso es para el cumple de mi hija. Excelente",
         date: "Hace 5 meses",
-        id: "cero"
+        id: 0,
+        like: true
     },
     {
         titulo: "Muy bueno",
         comentario: "Muy bueno, excelente producto, es lo que esperaba.",
         date: "Hace 6 meses",
-        id: "uno"
+        id: 1,
+        like: true
     },
     {
         titulo: "Excelente",
         comentario: "Hermoso mi hija le encanto,,,, lo recomiendo",
         date: "Hace 3 meses",
-        id: "dos"
+        id: 2,
+        like: true
     },
 ]
 
 const Comentarios: React.FC = () => {
-    const [like, setLike] = useState<boolean>(true)
-    const [dislike, setDislike] = useState(true)
+    //const [like, setLike] = useState<boolean>(true)
+    //const [dislike, setDislike] = useState(true)
+    
 
-    const handleLike = (r: string) => {
-        let a = comentarios.filter(el => el.id === r)
-        //console.log(a)
-        let b = a.find(el => el.id === r)
-        console.log(b)
-        if(a.find(el => el.id === r)) setLike(!like)
+    const handleLike = (r: number) => {
+        let buscado = comentarios.find(el => el.id === r)
+        //console.log(buscado)
+        let a = buscado?.like
+        //console.log("primero", a) //true
+        a = !a
+        //console.log("segundo", a) //false
     }
 
-    const handleDislike = (g: string) => {
-        setDislike(!dislike)
+    const handleDislike = (g: number) => {
+        let buscado = comentarios.find(el => el.id === g)
+        //console.log(buscado)
+        let a = buscado?.like
+        a = !a
     }
 
     return (
@@ -115,25 +123,25 @@ const Comentarios: React.FC = () => {
                                     </Stack>
                                 </Stack>
                                 <Stack direction="row" spacing={5}>
-                                    <Stack direction="row" alignItems="center" color={like ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={(comentarios.find(e => e.id === el.id)?.like) ? "blackAlpha.500" : ""}>
                                         <Icon
                                         key={el.id}
-                                        as={like ? AiOutlineLike : AiTwotoneLike}
+                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineLike : AiTwotoneLike}
                                         cursor="pointer"
                                         onClick={() => handleLike(el.id)}
                                         />
-                                        {like ?
+                                        {comentarios.find(e => e.id === el.id)?.like ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
-                                    <Stack direction="row" alignItems="center" color={dislike ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
                                         <Icon 
-                                        as={dislike ? AiOutlineDislike : AiTwotoneDislike} 
+                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineDislike : AiTwotoneDislike} 
                                         cursor="pointer"
                                         onClick={() => handleDislike(el.id)}
                                         />
-                                        {dislike ?
+                                        {comentarios.find(e => e.id === el.id)?.like ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
@@ -185,25 +193,25 @@ const Comentarios: React.FC = () => {
                                     </Stack>
                                 </Stack>
                                 <Stack direction="row" spacing={5}>
-                                    <Stack direction="row" alignItems="center" color={like ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
                                         <Icon
                                         key={el.id}
-                                        as={like ? AiOutlineLike : AiTwotoneLike}
+                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineLike : AiTwotoneLike}
                                         cursor="pointer"
                                         onClick={() => handleLike(el.id)}
                                         />
-                                        {like ?
+                                        {comentarios.find(e => e.id === el.id)?.like ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
-                                    <Stack direction="row" alignItems="center" color={dislike ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
                                         <Icon 
-                                        as={dislike ? AiOutlineDislike : AiTwotoneDislike} 
+                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineDislike : AiTwotoneDislike} 
                                         cursor="pointer"
                                         onClick={() => handleDislike(el.id)}
                                         />
-                                        {dislike ?
+                                        {comentarios.find(e => e.id === el.id)?.like ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
