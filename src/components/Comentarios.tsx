@@ -27,29 +27,54 @@ const comentarios: Opiniones[] = [
 
 const Comentarios: React.FC = () => {
     const [like, setLike] = useState<boolean>(true)
-    const [dislike, setDislike] = useState(false)
+    const [dislike, setDislike] = useState(true)
 
     const handleLike = (r: string) => {
-        let buscado = comentarios.find(el => el.id === r)
-        let encontrado = buscado?.id
-        console.log(encontrado)
-        if(encontrado) setLike(!like)
-        return
+        let a = comentarios.filter(el => el.id === r)
+        //console.log(a)
+        let b = a.find(el => el.id === r)
+        console.log(b)
+        if(a.find(el => el.id === r)) setLike(!like)
+    }
+
+    const handleDislike = (g: string) => {
+        setDislike(!dislike)
     }
 
     return (
         <Stack marginTop="2.5rem">
             <Tabs isFitted>
-                <TabList color="black" borderBottom="1px solid">
-                    <Tab _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} fontWeight="bold">Todas</Tab>
-                    <Tab _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} fontWeight="bold">Positivas</Tab>
-                    <Tab _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} fontWeight="bold">Negativas</Tab>
+                <TabList color="black" borderBottom="1px solid" borderColor="lightgray">
+                    <Tab 
+                    _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} 
+                    _hover={{color: "#3483fa !important"}}
+                    _selected={{color: "#3483fa !important", borderBottom: "3px solid #3483fa"}}
+                    fontWeight="bold"
+                    >
+                        Todas
+                    </Tab>
+                    <Tab 
+                    _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} 
+                    _hover={{color: "#3483fa !important"}}
+                    _selected={{color: "#3483fa !important", borderBottom: "3px solid #3483fa"}}
+                    fontWeight="bold"
+                    >
+                        Positivas
+                    </Tab>
+                    <Tab 
+                    _focus={{outline: "none", color:"#3483fa !important", borderBottom: "3px solid #3483fa"}} 
+                    _hover={{color: "#3483fa !important"}}
+                    _selected={{color: "#3483fa !important", borderBottom: "3px solid #3483fa"}}
+                    fontWeight="bold"
+                    >
+                        Negativas
+                    </Tab>
                 </TabList>
 
                 <TabPanels marginTop="15px">
                     <TabPanel paddingLeft={0} paddingBottom="0px !important">
                         {comentarios?.map(el => (
-                            <Stack marginBottom="2rem" id={el.id}>
+                            <Stack marginBottom="2rem" key={el.id}>
                                 <Stack direction="row" fontSize="26px" spacing={0}>
                                     <Icon viewBox="0 0 16 16" color="#3483fa">
                                         <path 
@@ -90,9 +115,9 @@ const Comentarios: React.FC = () => {
                                     </Stack>
                                 </Stack>
                                 <Stack direction="row" spacing={5}>
-                                    <Stack direction="row" alignItems="center">
+                                    <Stack direction="row" alignItems="center" color={like ? "blackAlpha.500" : ""}>
                                         <Icon
-                                        id={el.id}
+                                        key={el.id}
                                         as={like ? AiOutlineLike : AiTwotoneLike}
                                         cursor="pointer"
                                         onClick={() => handleLike(el.id)}
@@ -102,9 +127,16 @@ const Comentarios: React.FC = () => {
                                         : <Text>1</Text>
                                         }
                                     </Stack>
-                                    <Stack direction="row" alignItems="center">
-                                        <Icon as={AiOutlineDislike} cursor="pointer"/>
+                                    <Stack direction="row" alignItems="center" color={dislike ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => handleDislike(el.id)}
+                                        />
+                                        {dislike ?
                                         <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
                                     </Stack>
                                 </Stack>
                             </Stack>
@@ -152,7 +184,31 @@ const Comentarios: React.FC = () => {
                                         <Text color="blackAlpha.600" paddingLeft="5px">{el.date}</Text>
                                     </Stack>
                                 </Stack>
-                                <Stack></Stack> {/*botones de reaccion */}
+                                <Stack direction="row" spacing={5}>
+                                    <Stack direction="row" alignItems="center" color={like ? "blackAlpha.500" : ""}>
+                                        <Icon
+                                        key={el.id}
+                                        as={like ? AiOutlineLike : AiTwotoneLike}
+                                        cursor="pointer"
+                                        onClick={() => handleLike(el.id)}
+                                        />
+                                        {like ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center" color={dislike ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => handleDislike(el.id)}
+                                        />
+                                        {dislike ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                </Stack>
                             </Stack>
                         ))}
                     </TabPanel>
