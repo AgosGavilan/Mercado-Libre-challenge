@@ -1,0 +1,7 @@
+.denunciar {
+    display: none;
+}
+
+.pregunta:hover .denunciar {
+    display: block;
+}

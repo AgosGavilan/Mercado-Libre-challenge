@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { PyR } from "../product/types";
 import { BsArrowReturnRight } from "react-icons/bs"
+import s from "../styles/Description.module.css"
 
 
 const preguntasFrecuentes: string[] = [
@@ -137,12 +138,20 @@ const Description: React.FC = () => {
                     <Stack spacing={3}>
                             {pregYrtas?.map(el => (
                                 <Box>
-                                    <Text>{el.pregunta.charAt(0).toUpperCase()}{el.pregunta.slice(1)}</Text>
+                                    <Stack className={s.pregunta} direction="row">
+                                        <Text>{el.pregunta.charAt(0).toUpperCase()}{el.pregunta.slice(1)}</Text>
+                                        <Stack className={s.denunciar}>
+                                            <Link fontSize="sm">Denunciar</Link>
+                                        </Stack>
+                                    </Stack>
                                     {el.respuesta?.length ?
-                                    <Stack direction="row" marginLeft="10px" color="blackAlpha.700" marginTop="8px" alignItems="baseline">
+                                    <Stack className={s.pregunta} direction="row" marginLeft="10px" color="blackAlpha.700"  alignItems="baseline">
                                         <Icon as={BsArrowReturnRight} height="25px"></Icon>
                                         <Text>{el.respuesta}</Text>
                                         <Text fontSize="12px" alignItems="baseline">{el.date}</Text>
+                                        <Stack className={s.denunciar}>
+                                            <Link fontSize="sm">Denunciar</Link>
+                                        </Stack>
                                     </Stack>
                                     : ""}
                                 </Box>
