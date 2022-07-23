@@ -10,6 +10,7 @@ import Tabla from "../../components/Tabla";
 import Description from "../../components/Description";
 import Opioniones from "../../components/Opiniones";
 import Informacion from "../../components/Informacion";
+import Vendedor from "../../components/Vendedor";
 
 export interface Props {
   product: Product; //product es un objeto
@@ -26,7 +27,6 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
         marginBottom="16px"
         divider={<StackDivider borderColor="blackAlpha.300" marginInline="auto" marginLeft="3rem !important" width="90%" paddingInline="0.5rem" position="relative"/>} 
         maxWidth="770px"> {/*izquierda*/}
-          {/*imagen */}
           <ProductImage product={product} infocarousel={infocarousel}/>
           {/*Carrousel*/}
           <Stack paddingY="25px" marginInline="auto" width="90%" paddingInline="0.5rem" position="relative">
@@ -34,11 +34,8 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
             <Carrousel infocarousel={infocarousel} product={product}/>
             <Link marginTop="1.5rem !important" fontSize="sm" color="#1259c3">Ver más publicaciones del vendedor</Link>
           </Stack>
-          {/*Tabla */}
           <Tabla />
-          {/*Description */}
           <Description />
-          {/*Opiniones */}
           <Opioniones />
         </Stack>
 
@@ -48,6 +45,7 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
         marginTop="16px !important" 
         paddingRight="16px !important"> {/*derecha*/}
           <Informacion />
+          <Vendedor />
         </Stack>
 
     </Stack>
