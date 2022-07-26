@@ -83,7 +83,7 @@ const Description: React.FC = () => {
                 </Stack>
             </Box>
 
-            <Box paddingTop="32px">
+            <Box paddingTop="28px">
                 <Heading fontSize="24px" paddingBottom="22px" fontWeight="400">Preguntas y Respuestas</Heading>
                 <Stack paddingY="1rem">
                     <Text paddingBottom="1.2em" fontWeight="bold" fontSize="18px">¿Qué querés saber?</Text>

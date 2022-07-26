@@ -11,6 +11,9 @@ import Description from "../../components/Description";
 import Opioniones from "../../components/Opiniones";
 import Informacion from "../../components/Informacion";
 import Vendedor from "../../components/Vendedor";
+import MediosDePago from "../../components/MediosDePago";
+import ProdProm from "../../components/ProdProm";
+import MercadoShops from "../../components/MercadoShops";
 
 export interface Props {
   product: Product; //product es un objeto
@@ -43,9 +46,14 @@ const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
         maxWidth="368px" 
         width="368px" 
         marginTop="16px !important" 
-        paddingRight="16px !important"> {/*derecha*/}
+        paddingRight="16px !important"
+        spacing={5}
+        > {/*derecha*/}
           <Informacion />
           <Vendedor />
+          <MediosDePago />
+          <ProdProm />
+          <MercadoShops />
         </Stack>
 
     </Stack>

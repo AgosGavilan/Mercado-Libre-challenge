@@ -1,0 +1,7 @@
+.imagenes {
+    object-fit: contain;
+    height: 82px;
+    width: 82px;
+    border:1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+}

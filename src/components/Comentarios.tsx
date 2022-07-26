@@ -50,7 +50,7 @@ const Comentarios: React.FC = () => {
     }
 
     return (
-        <Stack marginTop="2.5rem">
+        <Stack marginTop="2rem">
             <Tabs isFitted>
                 <TabList color="black" borderBottom="1px solid" borderColor="lightgray">
                     <Tab 

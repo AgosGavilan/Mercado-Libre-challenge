@@ -37,7 +37,7 @@ let review: Review[] = [
 
 const Opioniones: React.FC = () => {
     return (
-        <Stack paddingY="25px" marginInline="auto" width="90%" paddingInline="0.5rem" position="relative">
+        <Stack paddingY="1rem" marginInline="auto" width="90%" paddingInline="0.5rem" position="relative">
             <Text paddingTop="1rem" paddingBottom="2rem" fontSize="24px" lineHeight="1">
                 Opioniones sobre {mock.product.title}
             </Text>
@@ -78,7 +78,7 @@ const Opioniones: React.FC = () => {
                     </Stack>
                     <Text fontSize="14px" color="blackAlpha.700">Promedio entre 4 opiniones</Text>
                 </Stack>
-                <Stack width="100%" spacing={1} marginLeft="2.5rem" paddingTop="0.5rem"> {/* derecha */}
+                <Stack width="100%" spacing={0} marginLeft="2.5rem" paddingTop="0.5rem"> {/* derecha */}
                     {review?.map(el => (
                         <Stack direction="row" alignItems="center">
                             <Text color="blackAlpha.600" width="20%">{el.estrellas} estrellas</Text>

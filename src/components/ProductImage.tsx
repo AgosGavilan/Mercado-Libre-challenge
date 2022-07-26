@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Stack, Box, Image } from "@chakra-ui/react";
 
 import { Props } from "../app/screens/Details";
 import s from "../styles/productImage.module.css"
 
 const ProductImage: React.FC<Props> = ({product}) => {
+
+  const imgDef = product.pictures[0].url
+  const [bigImg, setBigImg] = useState<string>(imgDef)
+
+  const handleSelect = (i:string) => {
+    let buscado = product.pictures.find(el => el.id === i)
+    //console.log(buscado)
+    let a = buscado?.url
+    //console.log(a)
+    setBigImg(a!)
+
+  }
+
+  
   return (
-    <Stack direction="row">
+    <Stack direction="row" marginBottom="2rem !important">
       <Stack direction="column" spacing={2}>
         {product.pictures?.map((el) => (
           <Box
@@ -26,6 +40,7 @@ const ProductImage: React.FC<Props> = ({product}) => {
               height="100%"
               width="100%"
               objectFit="contain"
+              onClick={()=> handleSelect(el.id!)}
             />
           </Box>
         ))}
@@ -33,7 +48,7 @@ const ProductImage: React.FC<Props> = ({product}) => {
       <Stack>
         <figure className={s.big_img}>
           <Image
-            src={product.pictures[0].url}
+            src={bigImg}
             cursor="zoom-in"
             height="auto"
             objectFit="contain"
