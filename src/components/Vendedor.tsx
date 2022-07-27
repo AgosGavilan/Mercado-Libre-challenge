@@ -5,7 +5,7 @@ import { GoLocation } from "react-icons/go"
 const Vendedor: React.FC = () => {
     return (
         <Stack border="1px solid" borderColor="blackAlpha.300" borderRadius="10px" padding="1rem">
-            <Text marginTop="12px" fontSize="18px">Información sobre el vendedor</Text>
+            <Text marginTop="1rem !important" fontSize="18px">Información sobre el vendedor</Text>
             <Stack spacing={6} marginTop="1.5rem !important">
                 <Stack direction="row">
                     <GoLocation />
@@ -29,7 +29,7 @@ const Vendedor: React.FC = () => {
                 <Stack height="10px" width="20%" backgroundColor="#f1fdd7"></Stack>
                 <Stack height="12px" width="20%" backgroundColor="#39b54a"></Stack>
             </Stack>
-            <Stack direction="row" divider={<StackDivider borderColor="blackAlpha.300"/>} marginTop="1.2rem !important">
+            <Stack direction="row" divider={<StackDivider borderColor="blackAlpha.300"/>} marginTop="1.5rem !important">
                 <Stack alignItems="center" width="33.33%">
                     <Text fontSize="25px">1014</Text>
                     <Text fontSize="xs" color="blackAlpha.700" marginTop="0px !important" textAlign="center" lineHeight="1.03">Ventas en los últimos 60 dias</Text>

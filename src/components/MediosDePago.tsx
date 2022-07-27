@@ -10,12 +10,12 @@ const MediosDePago: React.FC = () => {
         padding="1rem"
         divider={<StackDivider />}>
             <Stack>
-                <Text marginTop="12px" fontSize="18px" marginBottom="1rem">Devolución gratis</Text>
+                <Text marginTop="1rem" fontSize="18px" marginBottom="1rem">Devolución gratis</Text>
                 <Text color="blackAlpha.600" fontSize="sm" marginTop="3px !important" lineHeight="1.3">Tenés 30 dias desde que recibís el producto para devolverlo. ¡No importa el motivo!</Text>
                 <Link fontSize="sm" marginTop="1rem !important" marginBottom="1.3rem !important">Conocer más sobre devoluciones</Link>
             </Stack>
             <Stack>
-                <Text marginTop="12px" fontSize="18px" marginBottom="1rem">Garantía</Text>
+                <Text marginTop="1rem" fontSize="18px" marginBottom="1rem">Garantía</Text>
                 <Stack marginBottom="1rem !important">
                     <Text marginBottom="8px !important">Compra protegida con Mercado Pago</Text>
                     <Text color="blackAlpha.600" fontSize="sm" marginTop="3px !important" lineHeight="1.3">Recibi el producto que esperabas o te devolvemos tu dinero</Text>
@@ -27,7 +27,7 @@ const MediosDePago: React.FC = () => {
                 <Link fontSize="sm" marginTop="1.3rem !important" marginBottom="1.5rem !important">Conocer más sobre garantía</Link>
             </Stack>
             <Stack>
-                <Text marginTop="12px" fontSize="18px" marginBottom="8px !important">Medios de pago</Text>
+                <Text marginTop="1rem" fontSize="18px" marginBottom="8px !important">Medios de pago</Text>
                 <Stack width="100%" spacing={6}>
                     <Stack>
                         <Text>Hasta 12 cuotas sin tarjeta</Text>

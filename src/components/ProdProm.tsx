@@ -30,16 +30,14 @@ const productos: ProductPicture [] = [
 const ProdProm: React.FC = () => {
     return (
         <Stack border="1px solid" borderColor="blackAlpha.300" borderRadius="10px" padding="1rem">
-            <Stack direction="row" alignItems="baseline" marginY="1.5rem" spacing={3}>
+            <Stack direction="row" alignItems="baseline" marginY="2rem" spacing={3}>
                 <Text fontSize="18px" fontWeight={400}>Productos promocionados</Text>
-                <Link fontSize="sm">Anunciá aquí</Link>
+                <Link fontSize="sm" fontWeight={400}>Anunciá aquí</Link>
             </Stack>
             <Stack spacing={6} marginBottom="1.5rem !important">
                 {productos.map(el => (
                     <Stack direction="row" spacing={5} alignItems="flex-end">
-                        <Box height="82px" width="82px">
-                            <img src={el.url} className={s.imagenes}/>
-                        </Box>
+                        <img src={el.url} className={s.imagenes} height="82px" width="82px"/>
                         <Box>
                             <Text fontSize="20px" fontWeight={400}>$ {el.price}</Text>
                             <Text fontSize="sm" fontWeight="bold" color="#00a650">Envío gratis</Text>

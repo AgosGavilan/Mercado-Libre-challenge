@@ -6,9 +6,40 @@ import {
   Input,
   Icon,
   StackDivider,
+  Menu,
+  MenuButton,
+  Button,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { BiChevronDown } from "react-icons/bi"
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+
+const items: string[] = [
+  "Vehículos",
+  "Inmuebles",
+  "Supermercado",
+  "Tecnologías",
+  "Hogar y muebles",
+  "Electrodomésticos",
+  "Herramientas",
+  "Construcción",
+  "Desportes y fitnes",
+  "Accesorios para vehículos",
+  "Moda",
+  "Juegos y jueguetes",
+  "Bebés",
+  "Beleza y cuidado personal",
+  "Salud y equipamento médico",
+  "Industrias y oficinas",
+  "Agro",
+  "Productos sustentables",
+  "Servicios",
+  "Mas vendidos",
+  "Tiendas oficiales",
+  "Ver más categorías"
+]
 
 export const NavBar: React.FC = () => {
   return (
@@ -64,13 +95,25 @@ export const NavBar: React.FC = () => {
             color="blackAlpha.600"
             spacing={4}
           >
-            <Text>Categorias</Text>
-            <Text>Ofertas</Text>
-            <Text>Historial</Text>
-            <Text>Supermercado</Text>
-            <Text>Moda</Text>
-            <Text>Vender</Text>
-            <Text>Ayuda</Text>
+            <Menu>
+              <MenuButton>
+                <Stack direction="row" alignItems="center" spacing={1}>
+                  <Text>Categorías</Text>
+                  <BiChevronDown/>
+                </Stack>
+              </MenuButton>
+              <MenuList background="#333" color="white" paddingY="1.5rem" border="none">
+                {items && items.map(el => (
+                  <MenuItem _hover={{bg: "#3483fa"}} paddingLeft="2em" paddingRight="4rem" _focus={{bg: "#3483fa"}}>{el}</MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+            <Text cursor="pointer">Ofertas</Text>
+            <Text cursor="pointer">Historial</Text>
+            <Text cursor="pointer">Supermercado</Text>
+            <Text cursor="pointer">Moda</Text>
+            <Text cursor="pointer">Vender</Text>
+            <Text cursor="pointer">Ayuda</Text>
           </Stack>
         </Stack>
         <Stack direction="row" spacing={5} fontSize="sm" alignItems="center">

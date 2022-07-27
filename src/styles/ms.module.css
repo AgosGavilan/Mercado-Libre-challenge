@@ -1,0 +1,14 @@
+.container {
+    gap: 8px;
+    margin: -24px 12px 12px !important;
+    justify-content: center;
+}
+
+.title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -59,20 +59,16 @@ const Description: React.FC = () => {
 
     return (
         <Stack paddingY="25px" marginInline="auto" width="90%" paddingInline="0.5rem" position="relative">
-            <Box paddingBottom="40px">
+            <Box paddingBottom="30px">
                 <Text fontSize="24px" paddingBottom="22px">Descripción</Text>
                 <Stack spacing={5} color="#666" fontSize="20px">
                 <Text>PELUCHE IMPORTADO PERSONAJE STITCH</Text>
                 <Text>MEDIDA 1 METRO (100 CM )</Text>
                 <Text>DISPONIBLE: STITCH (CELESTE) O ANGEL (ROSA)</Text>
-                <Text>MATERIAL: PLUSH MUY SUAVE, RELLENO DE VELLON SILICONADO</Text>
                 <Text>SE PUEDE RETIRAR POR:</Text>
                 <Stack>
                     <Text>• AV. CORRIENTES Y URUGUAY</Text>
-                    <Text>• AV CORRIENTES Y CARLOS PELLEGRINI</Text>
-                    <Text>• AV CORRIENTES Y LEANDRO N. ALEM</Text>
                     <Text>• VILLA PUEYRREDON</Text>
-                    <Text>• VILLA BALLESTER</Text>
                 </Stack>
                 <Text>
                     Realizamos envíos por motomensajeria y tambien por correo argentino a todo el país    
@@ -83,10 +79,10 @@ const Description: React.FC = () => {
                 </Stack>
             </Box>
 
-            <Box paddingTop="28px">
+            <Box paddingTop="24px">
                 <Heading fontSize="24px" paddingBottom="22px" fontWeight="400">Preguntas y Respuestas</Heading>
                 <Stack paddingY="1rem">
-                    <Text paddingBottom="1.2em" fontWeight="bold" fontSize="18px">¿Qué querés saber?</Text>
+                    <Text paddingBottom="1em" fontWeight="bold" fontSize="18px">¿Qué querés saber?</Text>
                     <Stack direction="row" spacing={3}>
                         {preguntasFrecuentes?.map(p => (
                             <Link  
@@ -157,7 +153,7 @@ const Description: React.FC = () => {
                                 </Box>
                             ))}
                     </Stack>
-                    <Link fontSize="sm" paddingBottom="2rem">Ver todas las preguntas</Link>
+                    <Link fontSize="sm" paddingBottom="1.3rem">Ver todas las preguntas</Link>
                 </Stack>
             </Box>
         </Stack>

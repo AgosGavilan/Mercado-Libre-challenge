@@ -35,7 +35,7 @@ const Informacion: React.FC = () => {
                 <Text fontSize="14px" color="#3483fa" alignSelf="center" marginLeft="1em" minWidth="100px">(4)</Text>
             </Stack>
             <Stack marginTop="1rem !important">
-                <Text fontSize="36px" fontWeight="thin" lineHeight="1.03">$ {price}</Text>
+                <Text fontSize="38px" fontWeight="thin" lineHeight="1.03">$ {price}</Text>
                 <Text marginTop="0px !important" fontSize="18px">en 12x $1.166,60</Text>
                 <Link fontSize="sm" marginTop="3px !important" color="#3483fa">Ver los medios de pago</Link>
             </Stack>
@@ -71,7 +71,7 @@ const Informacion: React.FC = () => {
             <Stack marginTop="1rem !important">
                 <Text fontSize="18px" fontWeight={600}>¡Última disponible!</Text>
             </Stack>
-            <Stack marginTop="1.2rem !important">
+            <Stack marginTop="1.2rem !important" spacing={2}>
                 <Button height="3rem" backgroundColor="#3483fa" color="white" paddingX="3rem" _hover={{backgroundColor: "blue.600"}}>Comprar ahora</Button>
                 <Button height="3rem" backgroundColor="rgba(65,137,230,.15)" color="#3483fa" paddingX="3rem">Agregar al carrito</Button>
             </Stack>
