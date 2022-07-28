@@ -123,6 +123,7 @@ const Description: React.FC = () => {
                                 backgroundColor="#3483fa"
                                 color="white"
                                 paddingX="3rem"
+                                _hover={{backgroundColor: "blue.600"}}
                                 onClick={handleSubmit}
                                 >
                                     Preguntar

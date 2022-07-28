@@ -190,7 +190,7 @@ const Comentarios: React.FC = () => {
                     </TabPanel>
                     <TabPanel paddingLeft={0} paddingBottom="0px !important">
                     {comentarios?.map(el => (
-                            <Stack marginBottom="2rem">
+                            <Stack marginBottom="1.5rem">
                                 <Stack direction="row" fontSize="26px" spacing={0}>
                                     <Icon viewBox="0 0 16 16" color="#3483fa">
                                         <path 
@@ -223,7 +223,7 @@ const Comentarios: React.FC = () => {
                                         fillRule="evenodd"/>
                                     </Icon>
                                 </Stack>
-                                <Stack spacing={0} marginY="5px !important">
+                                <Stack spacing={0} marginTop="5px !important" marginBottom="0px !important">
                                     <Text fontWeight="bold">{el.titulo}</Text>
                                     <Stack direction="row">
                                         <Text>{el.comentario}</Text>
