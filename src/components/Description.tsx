@@ -64,6 +64,7 @@ const Description: React.FC = () => {
                 <Stack spacing={5} color="#666" fontSize="20px">
                 <Text>PELUCHE IMPORTADO PERSONAJE STITCH</Text>
                 <Text>MEDIDA 1 METRO (100 CM )</Text>
+                <Text>GIGANTE</Text>
                 <Text>DISPONIBLE: STITCH (CELESTE) O ANGEL (ROSA)</Text>
                 <Text>SE PUEDE RETIRAR POR:</Text>
                 <Stack>

@@ -20,7 +20,7 @@ const items: string[] = [
   "Vehículos",
   "Inmuebles",
   "Supermercado",
-  "Tecnologías",
+  "Tecnología",
   "Hogar y muebles",
   "Electrodomésticos",
   "Herramientas",

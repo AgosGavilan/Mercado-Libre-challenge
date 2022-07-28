@@ -1,6 +1,6 @@
 import { Box, Button, Icon, Link, Stack, StackDivider, Text } from "@chakra-ui/react";
-import React from "react";
-import { BsHeart } from "react-icons/bs"
+import React, { useState } from "react";
+import { BsHeart, BsFillHeartFill } from "react-icons/bs"
 import { AiFillStar, AiOutlineTrophy } from "react-icons/ai";
 import { IoShieldCheckmarkOutline } from "react-icons/io5"
 
@@ -8,7 +8,9 @@ import mock from "../product/mock";
 import s from "../styles/informacion.module.css"
 
 const Informacion: React.FC = () => {
-    const {sold_quantity, title, price, currency_id, condition} = mock.product
+    const {sold_quantity, title, price} = mock.product
+
+    const [like, setLike] = useState<boolean>(true)
 
 
     return (
@@ -22,7 +24,13 @@ const Informacion: React.FC = () => {
             </Stack>
             <Stack direction="row" spacing={-1}>
                 <Text fontSize="21px" fontWeight="bold" lineHeight="1.08">{title}!!!</Text>
-                <Icon as={BsHeart} color="#3483fa" fontSize="27" cursor="pointer"/>
+                <Icon 
+                as={like ? BsHeart : BsFillHeartFill} 
+                color="#3483fa" 
+                fontSize="27" 
+                cursor="pointer"
+                onClick={() => setLike(!like)}
+                />
             </Stack>
             <Stack direction="row">
                 <Stack direction="row" fontSize="16px" spacing={0.5} alignItems="center">
@@ -71,7 +79,7 @@ const Informacion: React.FC = () => {
             <Stack marginTop="1rem !important">
                 <Text fontSize="18px" fontWeight={600}>¡Última disponible!</Text>
             </Stack>
-            <Stack marginTop="1.2rem !important" spacing={2}>
+            <Stack marginTop="1.2rem !important" spacing={1.5}>
                 <Button height="3rem" backgroundColor="#3483fa" color="white" paddingX="3rem" _hover={{backgroundColor: "blue.600"}}>Comprar ahora</Button>
                 <Button height="3rem" backgroundColor="rgba(65,137,230,.15)" color="#3483fa" paddingX="3rem">Agregar al carrito</Button>
             </Stack>

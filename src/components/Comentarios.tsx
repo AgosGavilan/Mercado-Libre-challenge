@@ -9,48 +9,32 @@ const comentarios: Opiniones[] = [
         titulo: "Hermoso excelente",
         comentario: "Hermoso es para el cumple de mi hija. Excelente",
         date: "Hace 5 meses",
-        id: 0,
-        like: true
+        id: 0
     },
     {
         titulo: "Muy bueno",
         comentario: "Muy bueno, excelente producto, es lo que esperaba.",
         date: "Hace 6 meses",
-        id: 1,
-        like: true
+        id: 1
     },
     {
         titulo: "Excelente",
         comentario: "Hermoso mi hija le encanto,,,, lo recomiendo",
         date: "Hace 3 meses",
-        id: 2,
-        like: true
+        id: 2
     },
 ]
 
 const Comentarios: React.FC = () => {
-    //const [like, setLike] = useState<boolean>(true)
-    //const [dislike, setDislike] = useState(true)
-    
-
-    const handleLike = (r: number) => {
-        let buscado = comentarios.find(el => el.id === r)
-        //console.log(buscado)
-        let a = buscado?.like
-        //console.log("primero", a) //true
-        a = !a
-        //console.log("segundo", a) //false
-    }
-
-    const handleDislike = (g: number) => {
-        let buscado = comentarios.find(el => el.id === g)
-        //console.log(buscado)
-        let a = buscado?.like
-        a = !a
-    }
+    const [like1, setLike1] = useState<boolean>(true)
+    const [like2, setLike2] = useState<boolean>(true)
+    const [like3, setLike3] = useState<boolean>(true)
+    const [dislike1, setDislike1] = useState<boolean>(true)
+    const [dislike2, setDislike2] = useState<boolean>(true)
+    const [dislike3, setDislike3] = useState<boolean>(true)
 
     return (
-        <Stack marginTop="2rem">
+        <Stack marginTop="2rem" height="35rem">
             <Tabs isFitted>
                 <TabList color="black" borderBottom="1px solid" borderColor="lightgray">
                     <Tab 
@@ -122,31 +106,85 @@ const Comentarios: React.FC = () => {
                                         <Text color="blackAlpha.600" paddingLeft="5px">{el.date}</Text>
                                     </Stack>
                                 </Stack>
+                                {el.id === 0 ?
                                 <Stack direction="row" spacing={5}>
-                                    <Stack direction="row" alignItems="center" color={(comentarios.find(e => e.id === el.id)?.like) ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={like1 ? "blackAlpha.500" : ""}>
                                         <Icon
                                         key={el.id}
-                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineLike : AiTwotoneLike}
+                                        as={like1 ? AiOutlineLike : AiTwotoneLike}
                                         cursor="pointer"
-                                        onClick={() => handleLike(el.id)}
+                                        onClick={() => (setLike1(!like1))}
                                         />
-                                        {comentarios.find(e => e.id === el.id)?.like ?
+                                        {like1 ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
-                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={dislike1 ? "blackAlpha.500" : ""}>
                                         <Icon 
-                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineDislike : AiTwotoneDislike} 
+                                        as={dislike1 ? AiOutlineDislike : AiTwotoneDislike} 
                                         cursor="pointer"
-                                        onClick={() => handleDislike(el.id)}
+                                        onClick={() => setDislike1(!dislike1)}
                                         />
-                                        {comentarios.find(e => e.id === el.id)?.like ?
+                                        {dislike1 ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
                                 </Stack>
+                                : el.id === 1 ?
+                                <Stack direction="row" spacing={5}>
+                                    <Stack direction="row" alignItems="center" color={like2 ? "blackAlpha.500" : ""}>
+                                        <Icon
+                                        key={el.id}
+                                        as={like2 ? AiOutlineLike : AiTwotoneLike}
+                                        cursor="pointer"
+                                        onClick={() => setLike2(!like2)}
+                                        />
+                                        {like2 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center" color={dislike2 ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike2 ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => setDislike2(!dislike2)}
+                                        />
+                                        {dislike2 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                </Stack>
+                                : el.id === 2 ?
+                                <Stack direction="row" spacing={5}>
+                                    <Stack direction="row" alignItems="center" color={like3 ? "blackAlpha.500" : ""}>
+                                        <Icon
+                                        key={el.id}
+                                        as={like3 ? AiOutlineLike : AiTwotoneLike}
+                                        cursor="pointer"
+                                        onClick={() => setLike3(!like3)}
+                                        />
+                                        {like3 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center" color={dislike3 ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike3 ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => setDislike3(!dislike3)}
+                                        />
+                                        {dislike3 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                </Stack>
+                                : "" }
                             </Stack>
                         ))}
                     </TabPanel>
@@ -192,31 +230,85 @@ const Comentarios: React.FC = () => {
                                         <Text color="blackAlpha.600" paddingLeft="5px">{el.date}</Text>
                                     </Stack>
                                 </Stack>
+                                {el.id === 0 ?
                                 <Stack direction="row" spacing={5}>
-                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={like1 ? "blackAlpha.500" : ""}>
                                         <Icon
                                         key={el.id}
-                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineLike : AiTwotoneLike}
+                                        as={like1 ? AiOutlineLike : AiTwotoneLike}
                                         cursor="pointer"
-                                        onClick={() => handleLike(el.id)}
+                                        onClick={() => (setLike1(!like1))}
                                         />
-                                        {comentarios.find(e => e.id === el.id)?.like ?
+                                        {like1 ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
-                                    <Stack direction="row" alignItems="center" color={comentarios.find(e => e.id === el.id)?.like ? "blackAlpha.500" : ""}>
+                                    <Stack direction="row" alignItems="center" color={dislike1 ? "blackAlpha.500" : ""}>
                                         <Icon 
-                                        as={comentarios.find(e => e.id === el.id)?.like ? AiOutlineDislike : AiTwotoneDislike} 
+                                        as={dislike1 ? AiOutlineDislike : AiTwotoneDislike} 
                                         cursor="pointer"
-                                        onClick={() => handleDislike(el.id)}
+                                        onClick={() => setDislike1(!dislike1)}
                                         />
-                                        {comentarios.find(e => e.id === el.id)?.like ?
+                                        {dislike1 ?
                                         <Text>0</Text>
                                         : <Text>1</Text>
                                         }
                                     </Stack>
                                 </Stack>
+                                : el.id === 1 ?
+                                <Stack direction="row" spacing={5}>
+                                    <Stack direction="row" alignItems="center" color={like2 ? "blackAlpha.500" : ""}>
+                                        <Icon
+                                        key={el.id}
+                                        as={like2 ? AiOutlineLike : AiTwotoneLike}
+                                        cursor="pointer"
+                                        onClick={() => setLike2(!like2)}
+                                        />
+                                        {like2 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center" color={dislike2 ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike2 ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => setDislike2(!dislike2)}
+                                        />
+                                        {dislike2 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                </Stack>
+                                : el.id === 2 ?
+                                <Stack direction="row" spacing={5}>
+                                    <Stack direction="row" alignItems="center" color={like3 ? "blackAlpha.500" : ""}>
+                                        <Icon
+                                        key={el.id}
+                                        as={like3 ? AiOutlineLike : AiTwotoneLike}
+                                        cursor="pointer"
+                                        onClick={() => setLike3(!like3)}
+                                        />
+                                        {like3 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center" color={dislike3 ? "blackAlpha.500" : ""}>
+                                        <Icon 
+                                        as={dislike3 ? AiOutlineDislike : AiTwotoneDislike} 
+                                        cursor="pointer"
+                                        onClick={() => setDislike3(!dislike3)}
+                                        />
+                                        {dislike3 ?
+                                        <Text>0</Text>
+                                        : <Text>1</Text>
+                                        }
+                                    </Stack>
+                                </Stack>
+                                : "" }
                             </Stack>
                         ))}
                     </TabPanel>

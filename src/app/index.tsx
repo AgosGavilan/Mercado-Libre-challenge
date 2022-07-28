@@ -7,6 +7,7 @@ import { NavBar } from "../components/NavBar"
 import mock from "../product/mock";
 import imgcarousel from "../product/imgcarousel";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const App: React.FC = () => {
@@ -17,11 +18,13 @@ const App: React.FC = () => {
             <NavBar />
           </Container>
         </Box>
-
-          <Container alignSelf="center" maxWidth="container.xl">
-            <Header />
-            <DetailsScreen product={mock.product} infocarousel={imgcarousel.infocarousel}/>
-          </Container>
+        <Container alignSelf="center" maxWidth="container.xl">
+          <Header />
+          <DetailsScreen product={mock.product} infocarousel={imgcarousel.infocarousel}/>
+        </Container>
+        <Box background="blackAlpha.700" display="flex" justifyContent="center" marginTop="1rem !important">
+          <Footer />
+        </Box>
     </Stack>
   );
 };

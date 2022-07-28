@@ -30,7 +30,7 @@ const productos: ProductPicture [] = [
 const ProdProm: React.FC = () => {
     return (
         <Stack border="1px solid" borderColor="blackAlpha.300" borderRadius="10px" padding="1rem">
-            <Stack direction="row" alignItems="baseline" marginY="2rem" spacing={3}>
+            <Stack direction="row" alignItems="baseline" marginY="1.5rem" spacing={3}>
                 <Text fontSize="18px" fontWeight={400}>Productos promocionados</Text>
                 <Link fontSize="sm" fontWeight={400}>Anunciá aquí</Link>
             </Stack>
