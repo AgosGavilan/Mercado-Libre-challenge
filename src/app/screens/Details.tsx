@@ -23,7 +23,8 @@ export interface Props {
 const DetailsScreen: React.FC<Props> = ({product, infocarousel}) => {
 
   return (
-      <Stack backgroundColor="white" borderRadius="4px" boxShadow="base" direction="row" >
+      <Stack backgroundColor="white" borderRadius="5px" boxShadow="base" direction="row" minWidth="1184px">
+        
         {/*izquierda*/}
         <Stack 
         marginLeft="16px" 

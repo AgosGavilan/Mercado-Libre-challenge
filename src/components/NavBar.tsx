@@ -44,7 +44,7 @@ const items: string[] = [
 export const NavBar: React.FC = () => {
   return (
     <Stack spacing={3}>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack direction={{base: "column", md: "row"}} justifyContent="space-between">
         <Stack direction="row" spacing={14} flex={1}>
           <Image objectFit="contain" src={"https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.19.1/mercadolibre/logo__large_plus.png"}/>
           <Stack
@@ -63,7 +63,7 @@ export const NavBar: React.FC = () => {
           </Stack>
         </Stack>
         <Stack direction="row" alignItems="center">
-          <Image objectFit="contain" src="https://http2.mlstatic.com/D_NQ_840611-MLA48934732318_012022-OO.webp" height={39}/>
+          <Image objectFit="contain" src="https://http2.mlstatic.com/D_NQ_840611-MLA48934732318_012022-OO.webp" height={39} display={{base: "none", md: "flex"}}/>
         </Stack>
       </Stack>
       
@@ -96,7 +96,7 @@ export const NavBar: React.FC = () => {
             spacing={4}
           >
             <Menu>
-              <MenuButton _hover={{color: "blackAlpha.800"}}>
+              <MenuButton _hover={{color: "blackAlpha.800"}} display="flex">
                 <Stack direction="row" alignItems="center" spacing={1}>
                   <Text>Categorías</Text>
                   <BiChevronDown/>
