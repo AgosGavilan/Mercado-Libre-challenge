@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 
 const App: React.FC = () => {
   return (
-    <Stack backgroundColor="#ededed" fontFamily="body">
+    <Stack backgroundColor="#ededed">
         <Box backgroundColor="primary.500" paddingY={2} boxShadow="base"> {/*es como un div*/}
           <Container maxWidth="container.xl">
             <NavBar />
