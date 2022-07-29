@@ -5,7 +5,7 @@ import { VscChevronRight } from "react-icons/vsc";
 
 const Header: React.FC = () => {
   return (
-    <Stack fontSize={14} spacing={5} marginBottom={2}>
+    <Stack fontSize={14} spacing={5} marginBottom={2} minWidth="1184px">
       <Stack direction="row" marginTop={2}>
         <Text fontWeight="bold">También puede interesarte:</Text>
         <Text>squishmallows</Text>
