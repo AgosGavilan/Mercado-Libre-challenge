@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <Header />
           <DetailsScreen product={mock.product} infocarousel={imgcarousel.infocarousel}/>
         </Container>
-        <Box background="blackAlpha.700" display="flex" justifyContent="center" marginTop="1rem !important">
+        <Box background="blackAlpha.700" display="flex" justifyContent="center" marginTop="1rem !important" minWidth="1184px">
           <Footer />
         </Box>
     </Stack>
