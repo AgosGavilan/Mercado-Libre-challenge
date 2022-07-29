@@ -34,7 +34,7 @@ const Carrousel: React.FC<Props> = ({infocarousel}) => {
             <Stack>
                 <Stack direction="row" spacing={0}>
                     {infocarousel.pictures?.map(el => (
-                        <SwiperSlide>
+                        <SwiperSlide key={el.id}>
                             <Container padding="5px">
                                 <Stack 
                                 border="1px solid"

@@ -190,7 +190,7 @@ const Comentarios: React.FC = () => {
                     </TabPanel>
                     <TabPanel paddingLeft={0} paddingBottom="0px !important">
                     {comentarios?.map(el => (
-                            <Stack marginBottom="1.5rem">
+                            <Stack marginBottom="1.5rem" key={el.date}>
                                 <Stack direction="row" fontSize="26px" spacing={0}>
                                     <Icon viewBox="0 0 16 16" color="#3483fa">
                                         <path 

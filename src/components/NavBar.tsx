@@ -104,7 +104,7 @@ export const NavBar: React.FC = () => {
               </MenuButton>
               <MenuList background="#333" color="white" paddingY="1.5rem" border="none">
                 {items && items.map(el => (
-                  <MenuItem _hover={{bg: "#3483fa"}} paddingLeft="2em" paddingRight="4rem" _focus={{bg: "#3483fa"}}>{el}</MenuItem>
+                  <MenuItem key={el} _hover={{bg: "#3483fa"}} paddingLeft="2em" paddingRight="4rem" _focus={{bg: "#3483fa"}}>{el}</MenuItem>
                 ))}
               </MenuList>
             </Menu>

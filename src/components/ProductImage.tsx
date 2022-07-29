@@ -24,6 +24,7 @@ const ProductImage: React.FC<Props> = ({product}) => {
       <Stack direction="column" spacing={2}>
         {product.pictures?.map((el) => (
           <Box
+            key={el.id}
             border="1px"
             borderRadius="4px"
             borderColor="blackAlpha.400"

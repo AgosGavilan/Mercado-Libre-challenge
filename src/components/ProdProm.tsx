@@ -36,7 +36,7 @@ const ProdProm: React.FC = () => {
             </Stack>
             <Stack spacing={6} marginBottom="1.5rem !important">
                 {productos.map(el => (
-                    <Stack direction="row" spacing={5} alignItems="flex-end">
+                    <Stack direction="row" spacing={5} alignItems="flex-end" key={el.title}>
                         <img src={el.url} className={s.imagenes} height="82px" width="82px"/>
                         <Box>
                             <Text fontSize="20px" fontWeight={400}>$ {el.price}</Text>

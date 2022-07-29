@@ -44,7 +44,7 @@ const MercadoShops: React.FC = () => {
             <Stack background="#f5f5f5" marginTop="0px !important" borderRadius="0 0 5px 5px">
                 <Box display="flex" flexWrap="wrap" className={s.container} >
                     {MS?.map(el => (
-                        <Stack height="282px" width="160px" border="1px solid" borderRadius="8px" borderColor="#f5f5f5" backgroundColor="#fff !important">
+                        <Stack key={el.title} height="282px" width="160px" border="1px solid" borderRadius="8px" borderColor="#f5f5f5" backgroundColor="#fff !important">
                             <Box backgroundColor="#ededed" borderRadius="6px 6px 0 0">
                                 <Text fontSize="10px" fontWeight={700} textAlign="center" padding="12px">{el.store?.toUpperCase()}</Text>
                             </Box>

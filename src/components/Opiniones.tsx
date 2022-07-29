@@ -80,7 +80,7 @@ const Opioniones: React.FC = () => {
                 </Stack>
                 <Stack width="100%" spacing={0} marginLeft="2.5rem" paddingTop="0.5rem"> {/* derecha */}
                     {review?.map(el => (
-                        <Stack direction="row" alignItems="center">
+                        <Stack direction="row" alignItems="center" key={el.estrellas}>
                             <Text color="blackAlpha.600" width="20%">{el.estrellas} estrellas</Text>
                             <Progress 
                             value={el.value} 

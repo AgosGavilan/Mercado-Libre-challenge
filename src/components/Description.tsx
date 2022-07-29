@@ -86,7 +86,8 @@ const Description: React.FC = () => {
                     <Text paddingBottom="1em" fontWeight="bold" fontSize="18px">¿Qué querés saber?</Text>
                     <Stack direction="row" spacing={3}>
                         {preguntasFrecuentes?.map(p => (
-                            <Link  
+                            <Link
+                            key={p}  
                             paddingX="12px"
                             color="rgb(52, 131, 250)"
                             backgroundColor="rgba(65,137,230,.15)"
@@ -135,7 +136,7 @@ const Description: React.FC = () => {
                     <Text fontWeight="bold" fontSize="18px">Últimas realizadas</Text>
                     <Stack spacing={3}>
                             {pregYrtas?.map(el => (
-                                <Box>
+                                <Box key={el.date}>
                                     <Stack className={s.pregunta} direction="row">
                                         <Text>{el.pregunta.charAt(0).toUpperCase()}{el.pregunta.slice(1)}</Text>
                                         <Stack className={s.denunciar}>
