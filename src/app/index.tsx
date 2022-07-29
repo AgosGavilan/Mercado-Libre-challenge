@@ -12,13 +12,13 @@ import Footer from "../components/Footer";
 
 const App: React.FC = () => {
   return (
-    <Stack backgroundColor="#ededed">
+    <Stack backgroundColor="#ededed" minWidth="1184px">
         <Box backgroundColor="primary.500" paddingY={2} boxShadow="base" minWidth="1184px"> {/*es como un div*/}
           <Container maxWidth="container.xl">
             <NavBar />
           </Container>
         </Box>
-        <Container alignSelf="center" maxWidth="container.xl">
+        <Container alignSelf="center" maxWidth="container.xl" minWidth="1184px">
           <Header />
           <DetailsScreen product={mock.product} infocarousel={imgcarousel.infocarousel}/>
         </Container>
