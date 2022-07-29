@@ -14,7 +14,7 @@ export interface Product extends Record<string, any> {
   sold_quantity?: number;
   condition?: string;
   pictures: ProductPicture[];
-  attributes: any[]
+  attributes?: any[]
 }
 
 export interface PyR {
